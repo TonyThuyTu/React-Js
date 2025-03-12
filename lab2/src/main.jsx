@@ -16,7 +16,5 @@ createRoot(document.getElementById('root')).render(
 
     <Bai2 />
 
-   
-
   </StrictMode>,
 )
