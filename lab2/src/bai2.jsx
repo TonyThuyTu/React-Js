@@ -8,10 +8,11 @@ function Bai2() {
     <p>All my information</p>
     <table border="1" style={{ margin: "10px auto", width: "50%" }}>
     <thead>
+
         <tr>
-            <th>Cột 1</th>
-            <th>Cột 2</th>
+        <th>Info</th>
         </tr>
+        
     </thead>
 
     <tbody>
