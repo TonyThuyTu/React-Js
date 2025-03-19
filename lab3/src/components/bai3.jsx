@@ -11,7 +11,7 @@ function Bai3() {
 
             {show && <Alert variant="info">
                 
-                This is Tony Nguyen speaking to you:
+                This is Tony Nguyen speaking:
 
                 <br />
 

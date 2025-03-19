@@ -6,8 +6,12 @@ function Bai1() {
     return (
     <Container className="text-center mt-5">
         <h1>Count Time: {count}</h1>
-        <Button variant="primary" onClick={() => setCount(count + 1)}>
+        <Button variant="primary" onClick={() => setCount(count + 1)} className="me-2">
             Click here
+        </Button>
+
+        <Button variant="danger" onClick={() => setCount(0)}>
+            Reset
         </Button>
     </Container>
     );

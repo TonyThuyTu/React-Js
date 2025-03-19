@@ -1,10 +1,11 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Bai1 from './components/bai1'
 import Bai2 from './components/bai2'
 import Bai3 from './components/bai3'
+
 function App() {
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
       <Bai2 />
 
       <Bai3 />
+
+    
     </>
   )
 }
