@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Bai1 from './component/bai1'
 import Bai2 from './component/bai2'
-
+import Bai3 from './component/bai3'
+import Bai4 from './component/bai4'
 function App() {
   
 
@@ -21,6 +22,11 @@ function App() {
         <Bai1 />
 
         <Bai2 />
+
+        <Bai3 />
+
+        <Bai4 />
+        
       </div>
     </>
   )
