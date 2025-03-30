@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm</title>
+    <link rel="stylesheet" href="scss/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="admin-info">
+            <h5>Xin chào, Admin</h5>
+            <button class="btn btn-danger">Đăng xuất</button>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <h4 class="text-center">Quản lý bán hàng</h4>
+        <a href="home.html">Tổng quan</a>
+        <a href="#" class="active">Sản phẩm</a>
+        <a href="empolyees.html">Nhân viên</a>
+        <a href="orders.html">Đơn hàng</a>
+        <a href="guest.html">Khách hàng</a>
+    </div>
+    
+    <div class="content">
+        <h2>Quản lý Sản phẩm</h2>
+        
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">Thêm sản phẩm</button>
+        
+        <table class="table table-bordered mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th style="width: 150px;">Tên sản phẩm</th>
+                    <th style="width: 200px;">Hình ảnh</th>
+                    <th>Giá</th>
+                    <th style="width: 300px;">Mô tả</th>
+                    <th style="width: 100px;">Số lượng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="productList">
+                <tr>
+                    <td>1</td>
+                    <td>Iphone 16 pro max </td>
+                    <td><img src="assets/ip16prm titan black.png" alt="" width="200px" height="auto"></td>
+                    <td>500,000 VND</td>
+                    <td>Chuột gaming RGB với cảm biến chính xác cao.</td>
+                    <td>20</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn xóa sản phẩm?')">Xóa</button>
+                        <button class="btn btn-primary btn-sm">Sửa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Iphone 16 pro max</td>
+                    <td><img src="assets/ip16prm titan nature.png" alt="" width="200px" height="auto"></td>
+                    <td>1,200,000 VND</td>
+                    <td>Bàn phím cơ với switch Blue, gõ cực sướng.</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn xóa sản phẩm?')">Xóa</button>
+                        <button class="btn btn-primary btn-sm">Sửa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Iphone 16 pro max</td>
+                    <td><img src="assets/ip16prm titan nature.png" alt="" width="200px" height="auto"></td>
+                    <td>1,200,000 VND</td>
+                    <td>Bàn phím cơ với switch Blue, gõ cực sướng.</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn xóa sản phẩm?')">Xóa</button>
+                        <button class="btn btn-primary btn-sm">Sửa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Iphone 16 pro max</td>
+                    <td><img src="assets/ip16prm titan nature.png" alt="" width="200px" height="auto"></td>
+                    <td>1,200,000 VND</td>
+                    <td>Bàn phím cơ với switch Blue, gõ cực sướng.</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn xóa sản phẩm?')">Xóa</button>
+                        <button class="btn btn-primary btn-sm">Sửa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Thêm sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addProductForm">
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="productName"  required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Hình ảnh</label>
+                            <input type="file" class="form-control" id="productImage" accept="image/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Giá</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="productDescription" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productStock" class="form-label">Số lượng</label>
+                            <input type="number" class="form-control" id="productStock"  required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Lưu sản phẩm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center p-2" style="background: #343a40; color: white; font-size: 14px; position: fixed; bottom: 0; width: 100%; height: 40px;">
+        <p class="m-0">&copy; 2025 Quản lý bán hàng. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

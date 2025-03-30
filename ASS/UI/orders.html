@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đơn hàng</title>
+    <link rel="stylesheet" href="scss/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="admin-info">
+            <h5>Xin chào, Admin</h5>
+            <button class="btn btn-danger">Đăng xuất</button>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <h4 class="text-center">Quản lý bán hàng</h4>
+        <a href="home.html">Tổng quan</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="empolyees.html">Nhân viên</a>
+        <a href="#" class="active">Đơn hàng</a>
+        <a href="guest.html">Khách hàng</a>
+    </div>
+    
+    <div class="content">
+        <h2>Quản lý Đơn hàng</h2>
+        
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addOrderModal">Thêm đơn hàng</button>
+        
+        <table class="table table-bordered mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Khách hàng</th>
+                    <th>Sản phẩm</th>
+                    <th>Ngày đặt</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="orderList">
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Chuột gaming</td>
+                    <td>25/03/2025</td>
+                    <td><span class="badge bg-warning">Chờ xử lý</span></td>
+                    <td>
+                        <button class="btn btn-success btn-sm" onclick="alert('Bạn muốn xác nhận đơn hàng?')">Xác nhận</button>
+                        <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn hủy đơn hàng?')">Hủy</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="modal fade" id="addOrderModal" tabindex="-1" aria-labelledby="addOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addOrderModalLabel">Thêm đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addOrderForm">
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Khách hàng</label>
+                            <input type="text" class="form-control" id="customerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Sản phẩm</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderDate" class="form-label">Ngày đặt</label>
+                            <input type="date" class="form-control" id="orderDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Lưu đơn hàng</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center p-2" style="background: #343a40; color: white; font-size: 14px; position: fixed; bottom: 0; width: 100%; height: 40px;">
+        <p class="m-0">&copy; 2025 Quản lý bán hàng. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('addOrderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const customer = document.getElementById('customerName').value;
+            const product = document.getElementById('productName').value;
+            const date = document.getElementById('orderDate').value;
+            const orderList = document.getElementById('orderList');
+            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>#</td>
+                <td>${customer}</td>
+                <td>${product}</td>
+                <td>${date}</td>
+                <td><span class="badge bg-warning">Chờ xử lý</span></td>
+                <td>
+                    <button class="btn btn-success btn-sm" onclick="alert('Bạn muốn xác nhận đơn hàng?')">Xác nhận</button>
+                    <button class="btn btn-danger btn-sm" onclick="alert('Bạn muốn hủy đơn hàng?')">Hủy</button>
+                </td>
+            `;
+            orderList.appendChild(row);
+            
+            document.getElementById('addOrderForm').reset();
+            new bootstrap.Modal(document.getElementById('addOrderModal')).hide();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
