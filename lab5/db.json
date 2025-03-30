@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "Bài viết 2",
+      "body": "Nội dung bài viết 2"
+    },
+    {
+      "id": "3",
+      "title": "Bài viết 3",
+      "body": "Nội dung bài viết 3"
+    },
+    {
+      "id": "4",
+      "title": "Bài viết 4",
+      "body": "Nội dung bài viết 4"
+    },
+    {
+      "id": "5",
+      "title": "Bài viết 5",
+      "body": "Nội dung bài viết 5"
+    },
+    {
+      "id": "6a67",
+      "title": "Tony Nguyen",
+      "body": "i am so handsome\n"
+    },
+    {
+      "id": "a4ce",
+      "title": "Okela",
+      "body": "okokokokok"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "email": "a@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Nguyễn Văn B",
+      "email": "b@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Trần Thị C",
+      "email": "c@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Lê Văn D",
+      "email": "d@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Phạm Thị E",
+      "email": "e@example.com"
+    }
+  ]
+}
