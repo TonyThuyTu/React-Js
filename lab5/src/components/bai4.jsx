@@ -3,7 +3,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-function Bai4() {
+export default function Bai4() {
   const [responseMessage, setResponseMessage] = useState("");
   const {
     register,
@@ -42,4 +42,3 @@ function Bai4() {
     </Container>
   );
 }
-export default Bai4;

@@ -20,6 +20,7 @@ export default function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <Bai2 />
 
       <Bai3 />
@@ -27,6 +28,7 @@ export default function App() {
       <Bai4 />
 
       <Bai5 />
+      
     </>
   )
 }
