@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "e7b1",
+      "email": "nguyenlehoangtu120405@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": "2be1",
+      "email": "Quyngaisensua@gmail.com",
+      "password": "1204005"
+    },
+    {
+      "id": "cc58",
+      "email": "tudeptrai@gmail.com",
+      "password": "123460963490"
+    },
+    {
+      "id": "e162",
+      "email": "venom@gmail.com",
+      "password": "123412254"
+    }
+  ],
+  "posts": []
+}
