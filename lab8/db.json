@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 13",
+      "price": 999,
+      "quantity": 50
+    },
+    {
+      "id": "2",
+      "name": "iPhone 15",
+      "price": 999,
+      "quantity": 50
+    },
+    {
+      "id": "3",
+      "name": "iPhone 19",
+      "price": 999,
+      "quantity": 50
+    },
+    {
+      "name": "PRO player",
+      "price": "80",
+      "quantity": "99",
+      "id": "e68e"
+    },
+    {
+      "id": "2c4c",
+      "name": "macbook pro",
+      "price": "1000",
+      "quantity": "100"
+    }
+  ]
+}
