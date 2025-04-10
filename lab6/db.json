@@ -19,6 +19,11 @@
       "id": "e162",
       "email": "venom@gmail.com",
       "password": "123412254"
+    },
+    {
+      "id": "4772",
+      "email": "spiderman@gmail.com",
+      "password": "123456789"
     }
   ],
   "posts": []
