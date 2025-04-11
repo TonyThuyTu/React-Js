@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Table, Button, Container, Alert, Spinner, Modal } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,6 +10,14 @@ export default function ProductList() {
 
   const [showConfirm, setShowConfirm] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true); // loading giả lập
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoadingScreen(false);
+    }, 2000); // Delay 2s
+    return () => clearTimeout(timer);
+  }, []);
 
   const { data: products, isLoading, isError, error } = useQuery({
     queryKey: ['products'],
@@ -35,12 +43,11 @@ export default function ProductList() {
     }
   };
 
-  if (isLoading) {
+  if (isLoading || showLoadingScreen) {
     return (
       <div className="text-center mt-5">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading data...</span>
-        </Spinner>
+        <Spinner animation="border" role="status" />
+        <div className="mt-2 fw-bold">Loading...</div>
       </div>
     );
   }
@@ -107,8 +114,7 @@ export default function ProductList() {
           <Modal.Title>Confirm Deletion</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Are you sure you want to delete{' '}
-          <strong>{selectedProduct?.name}</strong>?
+          Are you sure you want to delete <strong>{selectedProduct?.name}</strong>?
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowConfirm(false)}>
@@ -121,6 +127,4 @@ export default function ProductList() {
       </Modal>
     </Container>
   );
-};
-
-
+}
